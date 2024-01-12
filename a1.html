@@ -80,13 +80,12 @@
       <p>
         <b>Additional Questions</b><br>
         1. Yellow LED represented as blue for improved visibility<img src="IMG_4732.jpeg" /><br>
-        2. The Arduino Uno can handle a maximum of 200mA or 0.2A of current 
-        at a time. If all LEDs used have a desired current of 0.02mA, then we can divide 0.02A from 0.2A to get a total of 10 LEDs. <br>
+        2. Because there are 14 input/output pins available on the Arduino board, we can blink 14 LEDs independently. To calculate the total current this would draw, we can multiply the number of LEDs we have by the forward current (0.02A is used across the LEDs we used) to get a current of 0.28A.   <br>
         3. I found that while looking very closely to the LED while blinking,
         I needed to blink the LED every 9 milliseconds until I could no
         longer tell it was blinking. While looking at the LED at an average distance, I would give a range from 10-12 milliseconds.<br>
       </p>
     </div>
-    
+
   </body>
 </html>
