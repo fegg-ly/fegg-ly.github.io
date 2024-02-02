@@ -114,10 +114,7 @@
         1. To begin, one documentation states that the PWM for a servo 
         motor is approximately 20ms. Knowing that the delay between each 
         turn in the for-loop is 100ms, I graphed each step + delay 
-        as approximately 120ms. Not pictured but an important
-        consideration is that as the steps increase, the PWM of the servo motor
-        will also increase (because it takes slightly longer for the servo 
-        motor to achieve a bigger angle). It's also worth noting that when 
+        as approximately 120ms. It's also worth noting that when 
         pin 9 is activated on the Arduino, it uses approximately 5V. 
         And since voltage is not controlled by the servo.write function,
         we can rule out the angle of the servo from varying the voltage
