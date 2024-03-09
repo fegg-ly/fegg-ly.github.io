@@ -72,7 +72,7 @@
 
     <h2>Technical Implementation</h2>
     <div class="header">
-      <img src="schematic6.jpeg" />
+      <img src="final-schematic.jpeg" />
       <p>On the left is the schematic that represents my final project.
         The PIR motion sensor is connected to pin 2 on my Arduino, and 
         sends a signal whenever it detects motion. This signal is 
@@ -114,15 +114,15 @@
 
             /* checks if the PIR motion sensor reads any motion */
             if (digitalRead(pirPin) == HIGH && !fadingON) {
-                fadingON = true;    /* sets the LED to fading on to true */
                 fadingOFF = false;  /* sets the LED fading off to false */
                 startTime = millis();   /* initializes the start time of the LED being on */
                 /* fades the LED on with a 10ms delay */
                 for (int brightness = 0; brightness <= 255; brightness++) {
-                analogWrite(ledPin, brightness);
-                delay(10); 
-                fadingON = false;   /* sets the LED to finding on to false */
+                    fadingON = true;    /* sets the LED to fading on to true */
+                    analogWrite(ledPin, brightness);
+                    delay(10); 
                 }
+                fadingON = false;   /* sets the LED to finding on to false */
                 /* LED remains on at brightest setting once it finishes fading on */
                 analogWrite(ledPin, 255);
             } else if (digitalRead(pirPin) == LOW) {
@@ -148,7 +148,7 @@
 
     <h2>Video Demo</h2>
     <div>
-        <iframe width="560" height="315" src="https://youtu.be/R9a773m3Ddw?si=22ZXLSNbOZ2GP2PN" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/R9a773m3Ddw" frameborder="0" allowfullscreen></iframe>
     </div>
         
   </body>
